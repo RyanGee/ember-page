@@ -7,18 +7,19 @@ This is a one page application built to learn Ember.js. It uses Sass and the Toa
 # To get ember-scroll-to scrolling up properly:
 `scrollVertical()` in `node_modules/ember-scroll-to/addon/services/scroller.js` needs this update:
 `  scrollVertical (target, opts = {}) {
-    return new RSVP.Promise((resolve, reject) => {
-      this.get('scrollable')
-        .animate(
-          {
-            scrollTop: this.get('scrollable').scrollTop() - this.get('scrollable').offset().top + this.getVerticalCoord(target, opts.offset)
-          },
-          opts.duration || this.get('duration'),
-          opts.easing || this.get('easing'),
-          opts.complete
-        )
-        .promise()
-        .then(resolve, reject);
+     var top= - this.get('scrollable').offset().top + this.getVerticalCoord(target, opts.offset);
+        return new RSVP.Promise((resolve, reject) => {
+          this.get('scrollable')
+          .animate(
+            {
+              scrollTop: top
+            },
+            opts.duration || this.get('duration'),
+            opts.easing || this.get('easing'),
+            opts.complete
+          )
+          .promise()
+          .then(resolve, reject);
     });
   }
 `
