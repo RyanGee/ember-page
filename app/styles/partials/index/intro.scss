@@ -1,0 +1,25 @@
+section#intro {
+	padding: 100px 20px;
+	text-align: center;
+
+	h2 {
+		font-size: 2em;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid $lightGreen;
+		display: inline-block;
+	}
+
+	a {
+		color: $darkGreen;
+
+		&:hover {
+			color: $darkGreen;
+		}
+
+		&.btn {
+			background: $darkGreen;
+			color: $lightGrey;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+section#contact {
+	padding: 100px 20px;
+	text-align: center;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		font-size: 2em;
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+		border-bottom: 1px solid $lightGreen;
+		display: inline-block;
+	}
+
+	a {
+		color: $darkGreen;
+
+		&:hover {
+			color: $darkGreen;
+		}
+
+		&.btn {
+			background: $darkGreen;
+			color: $lightGrey;
+		}
+	}
+
+	div.contact-wrap {
+		margin-top: 2em;
+	}
+
+	span.contact {
+		font-size: 2em;
+		line-height: 1.6em;
+		display: block;
+	}
+}

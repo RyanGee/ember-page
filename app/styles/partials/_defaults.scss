@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
 }
 
 body {
@@ -18,3 +19,30 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $headingFont;
 }
 
+.max-width {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+a.btn {
+	display: inline-block;
+	padding: 3px 15px;
+	border-radius: 10px;
+	color: white;
+	background: $lightGreen;
+	margin-top: 20px;
+
+	&:hover {
+		background: $darkGreen;
+	}
+
+	&.secondary {
+		background: $lightGrey;
+		color: $bodyColor;
+	}
+}
