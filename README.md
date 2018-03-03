@@ -1,7 +1,28 @@
 # ember-page
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+
+This is a one page application built to learn Ember.js. It uses Sass and the Toast framework.
+
+# To get ember-scroll-to scrolling up properly:
+`scrollVertical()` in `node_modules/ember-scroll-to/addon/services/scroller.js` needs this update:
+`  scrollVertical (target, opts = {}) {
+    return new RSVP.Promise((resolve, reject) => {
+      this.get('scrollable')
+        .animate(
+          {
+            scrollTop: this.get('scrollable').scrollTop() - this.get('scrollable').offset().top + this.getVerticalCoord(target, opts.offset)
+          },
+          opts.duration || this.get('duration'),
+          opts.easing || this.get('easing'),
+          opts.complete
+        )
+        .promise()
+        .then(resolve, reject);
+    });
+  }
+`
+
 
 ## Prerequisites
 
@@ -27,11 +48,6 @@ You will need the following things properly installed on your computer.
 ### Code Generators
 
 Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
 
 ### Linting
 
