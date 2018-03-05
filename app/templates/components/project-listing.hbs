@@ -1,0 +1,11 @@
+<article class="project">
+	<div class="project-image {{if isOpen "open"}}">
+		<img {{action 'toggleImageSize'}} src="{{project.image}}" alt="{{project.title}}"/>
+	</div>
+	<div class="description">
+		<h2>{{project.title}}</h2>
+		<h4>{{project.summary}}</h4>
+		<p>{{project.description}}</p>
+		<a href="{{project.link}}" class="btn" target="_blank">View site</a>
+	</div>
+</article>

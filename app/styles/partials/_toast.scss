@@ -80,6 +80,7 @@ $toast-pulls: true !default;
       } @else {
 
         width: percentage($i/$group);
+        padding-left: $toast-gutter-width;
 
       }
     }

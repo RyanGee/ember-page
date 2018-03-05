@@ -1,0 +1,77 @@
+section#projects {
+	padding: 100px 20px;
+	background: linear-gradient(lighten($lightGreen, 5%), darken($darkGreen, 5%));
+
+	h2 {
+		font-size: 2em;
+	    line-height: 1.2em;
+	    color: white;
+	    text-align: center;
+	}
+
+	form {
+		position: relative;
+
+		input {
+			width: 100%;
+			box-shadow: none;
+			border: none;
+			margin-bottom: 50px;
+			height: 50px;
+			border-radius: 25px;
+			padding: 0 20px;
+		}
+
+		span {
+			position: absolute;
+		    line-height: 46px;
+		    padding: 0 15px;
+		    border-radius: 25px;
+		    right: 0px;
+		    top: 25px;
+		    color: white;
+		    transform: translateY(-50%);
+		    background: $darkGreen;
+		    border: 2px solid white;	
+		}
+	}
+
+	.project {
+		background: $lightGrey;
+		margin-bottom: 20px;
+
+		.project-image {
+			img {
+				width: 100%;
+			}
+		}
+
+		.description {
+			padding: 20px;
+		}
+
+		a {
+			color: $darkGreen;
+
+			&:hover {
+				color: $darkGreen;
+			}
+
+			&.btn {
+				background: $darkGreen;
+				color: $lightGrey;
+			}
+		}
+
+		h2 {
+			font-size: 2em;
+			display: inline-block;
+			margin: 0 0 10px;
+			color: $headingColor;
+		}
+
+		h4 {
+			margin: 0 0 10px;
+		}
+	}
+}

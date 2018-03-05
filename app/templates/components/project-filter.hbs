@@ -1,0 +1,8 @@
+<form class="search-form">
+	{{input value=value
+        key-up=(action 'handleFilterEntry')
+        class="light"
+        placeholder="Filter By Skills (Laravel, Javascript, SASS etc)."}}
+    <span class="fa fa-search"></span>
+</form>
+{{yield results}}
